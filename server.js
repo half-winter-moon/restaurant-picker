@@ -4,12 +4,16 @@ const bodyParser = require('body-parser');
 
 const mongodb = require('./db/connect');
 const restaurantsRoutes = require('./routes/restaurants');
+const usersRoutes = require('./routes/users');
+const cuisinesRoutes = require('./routes/cuisines');
 
 const port = process.env.PORT || 3000;
 const app = express();
 app.use(cors());
 
 app.use('/restaurants', restaurantsRoutes);
+app.use('/users', usersRoutes);
+app.use('/cuisines', cuisinesRoutes);
 
 mongodb.initDb((err) => {
   if (err) {
