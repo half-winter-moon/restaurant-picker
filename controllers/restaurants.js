@@ -43,7 +43,7 @@ const createRestaurant = async (req, res) => {
   try {
     const restaurant = {
       restaurantName: req.body.restaurantName,
-      cusine: req.body.cusine,
+      cuisine: req.body.cuisine,
       description: req.body.description,
       address: req.body.address,
       zipCode: req.body.zipCode,
@@ -67,6 +67,7 @@ const createRestaurant = async (req, res) => {
         .status(500)
         .json(`An error occurred creating a restaurant: ${response.error}`);
     }
+    console.log('Hi');
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
