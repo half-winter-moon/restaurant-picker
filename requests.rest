@@ -1,0 +1,30 @@
+############################
+### LOCALHOST ###
+############################
+
+######## RESTAURANTS
+
+GET http://localhost:3000/restaurants
+###
+GET http://localhost:3000/restaurants/62b1dd7e3e72bb0c1e8a07f3
+
+###
+POST http://localhost:3000/restaurants HTTP/1.1 
+content-type: application/json
+
+{
+  "restaurantName": "New name",
+  "cuisine": "Whatever",
+  "description": "A brief description about the restaurant",
+  "address": "274 S 2nd W, Rexburg, ID 83440",
+  "zipCode": "12345",
+  "opens": "10am",
+  "closes": "9pm",
+  "phoneNumber": "208-356-9005",
+  "restaurantWebsite": "example.com",
+  "reviews": [
+    "1",
+    "2",
+    "3"
+  ]
+}

@@ -9,7 +9,7 @@ const cuisinesRoutes = require('./routes/cuisines');
 
 const port = process.env.PORT || 3000;
 const app = express();
-app.use(cors());
+app.use(cors()).use(bodyParser.json());
 
 app.use('/restaurants', restaurantsRoutes);
 app.use('/users', usersRoutes);
