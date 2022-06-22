@@ -73,8 +73,34 @@ const createRestaurant = async (req, res) => {
   }
 };
 
+const deleteRestaurant = async (req, res) => {
+  try {
+    if (!ObjectId.isValid(req.params.id)) {
+      res
+        .status(400)
+        .json('Must use a valid restaurant id to delete a restaurant.');
+    }
+    const restaurantId = new ObjectId(req.params.id);
+    const response = await mongodb
+      .getDb()
+      .db()
+      .collection('restaurants')
+      .remove({ _id: restaurantId }, true);
+    if (response.deletedCount > 0) {
+      res.status(204).send();
+    } else {
+      res
+        .status(500)
+        .json(`An error occurred deleting a restaurant: ${response.error}`);
+    }
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+};
+
 module.exports = {
   getAllRestaurants,
   getRestaurant,
   createRestaurant,
+  deleteRestaurant,
 };

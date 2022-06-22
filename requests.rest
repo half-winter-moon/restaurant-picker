@@ -7,7 +7,6 @@
 GET http://localhost:3000/restaurants
 ###
 GET http://localhost:3000/restaurants/62b1dd7e3e72bb0c1e8a07f3
-
 ###
 POST http://localhost:3000/restaurants HTTP/1.1 
 content-type: application/json
@@ -28,8 +27,13 @@ content-type: application/json
     "3"
   ]
 }
+###
+DELETE  http://localhost:3000/restaurants/62b39aa28e9b4068103a1ceb HTTP/1.1 
 
-// USERS
+
+
+######## USERS
+
 ### get all users
 GET http://localhost:3000/users
 
@@ -47,7 +51,6 @@ content-type: application/json
   "email":"email@email.com"
 }
 
-
 ### update a user
 PUT http://localhost:3000/users/62b32b21bfdce0a41f009702 HTTP/1.1
 content-type: application/json
@@ -59,11 +62,13 @@ content-type: application/json
   "email":"email2@email.com"
   }
   
-  
 ### delete a user
 DELETE http://localhost:3000/users/62b32b21bfdce0a41f009702
 
-// CUISINES
+
+
+######## CUISINES
+
 ### get all cuisines
 GET http://localhost:3000/cuisines
 
@@ -79,7 +84,6 @@ content-type: application/json
   "description":"Usually deap-fried and buttered, no one can beat a southern Grandma's chicken."
 }
 
-
 ### update a cuisine
 PUT http://localhost:3000/cuisines/62b32d17bfdce0a41f009704 HTTP/1.1
 content-type: application/json
@@ -88,7 +92,6 @@ content-type: application/json
   "name":"Southern",
   "description":"Usually deap-fried."
   }
-  
   
 ### delete a cuisine
 DELETE http://localhost:3000/cuisines/62b32d17bfdce0a41f009704
