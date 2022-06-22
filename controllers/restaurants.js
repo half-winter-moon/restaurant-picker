@@ -73,6 +73,47 @@ const createRestaurant = async (req, res) => {
   }
 };
 
+const updateRestaurant = async (req, res) => {
+  try {
+    if (!ObjectId.isValid(req.params.id)) {
+      res
+        .status(400)
+        .json('Must use a valid restaurant id to update a restaurant.');
+    }
+
+    const restaurantId = new ObjectId(req.params.id);
+
+    const restaurant = {
+      restaurantName: req.body.restaurantName,
+      cuisine: req.body.cuisine,
+      description: req.body.description,
+      address: req.body.address,
+      zipCode: req.body.zipCode,
+      opens: req.body.opens,
+      closes: req.body.closes,
+      phoneNumber: req.body.phoneNumber,
+      restaurantWebsite: req.body.restaurantWebsite,
+      reviews: req.body.reviews,
+    };
+
+    const response = await mongodb
+      .getDb()
+      .db()
+      .collection('restaurants')
+      .replaceOne({ _id: restaurantId }, restaurant);
+
+    if (response.modifiedCount > 0) {
+      res.status(204).send();
+    } else {
+      res
+        .status(500)
+        .json(`An error occurred updating a restaurant: ${response.error}`);
+    }
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+};
+
 const deleteRestaurant = async (req, res) => {
   try {
     if (!ObjectId.isValid(req.params.id)) {
@@ -102,5 +143,6 @@ module.exports = {
   getAllRestaurants,
   getRestaurant,
   createRestaurant,
+  updateRestaurant,
   deleteRestaurant,
 };
