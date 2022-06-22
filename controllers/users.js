@@ -1,4 +1,5 @@
 const mongodb = require('../db/connect');
+const ObjectId = require('mongodb').ObjectId;
 
 // getUsers function that gets all the users from the users collection
 const getUsers = async (req, res) => {
@@ -31,6 +32,7 @@ const getUser = async (req, res) => {
 
 // addUser function that creates a user item in the users collection
 const addUser = async (req, res) => {
+  try {
   const user = {
     name: req.body.name,
     reviewsPosted: req.body.reviewsPosted,
@@ -43,6 +45,9 @@ const addUser = async (req, res) => {
   } else {
     res.status(500).json(response.error || 'Some error occurred while adding the new user.');
   }
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+}
 };
 
 // updateUser function that updates an existing user in the users collection
