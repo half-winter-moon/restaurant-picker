@@ -1,0 +1,62 @@
+############################
+######## LOCALHOST #########
+############################
+
+######## RESTAURANTS
+
+### Gets all restaurants
+GET http://localhost:3000/restaurants
+
+### Gets a restaurant by its ID
+GET http://localhost:3000/restaurants/62b3b2752174cc0c56ab33ba
+
+### Creates a restaurant
+POST http://localhost:3000/restaurants HTTP/1.1 
+content-type: application/json
+
+{
+  "restaurantName": "New name",
+  "cuisine": "Brazilian",
+  "description": "A brief description about the restaurant",
+  "address": "274 S 2nd W, Rexburg, ID 83440",
+  "zipCode": "13452",
+  "opens": "10am",
+  "closes": "9pm",
+  "phoneNumber": "208-356-9005",
+  "restaurantWebsite": "example.com",
+  "reviews": [
+    "1",
+    "2",
+    "3"
+  ]
+}
+
+### Updates a restaurant
+PUT http://localhost:3000/restaurants/62b39a41158ce93627c42dad HTTP/1.1 
+content-type: application/json
+
+{
+  "restaurantName": "Other Name",
+  "cuisine": "Whatever",
+  "description": "A brief description about the restaurant",
+  "address": "274 S 2nd W, Rexburg, ID 83440",
+  "zipCode": "13452",
+  "opens": "10am",
+  "closes": "9pm",
+  "phoneNumber": "208-356-9005",
+  "restaurantWebsite": "example.com",
+  "reviews": [
+    "1",
+    "2",
+    "3"
+  ]
+}
+
+### Gets restaurant that do not match such Zip Code
+GET http://localhost:3000/restaurants/excludeByZipCode/12345
+
+### Gets restaurant that do not match such Cuisine
+GET http://localhost:3000/restaurants/excludeByCuisine/Mexican
+
+### Deletes a restaurant by its ID
+DELETE  http://localhost:3000/restaurants/62b3ac39c2f688521a6317be HTTP/1.1 

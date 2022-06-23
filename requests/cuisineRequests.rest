@@ -1,0 +1,32 @@
+############################
+######## LOCALHOST #########
+############################
+
+######## CUISINES
+
+### get all cuisines
+GET http://localhost:3000/cuisines
+
+### get one cuisine
+GET http://localhost:3000/cuisines/62b1d9b8ffeaf1c954d35584
+
+### create a new cuisine
+POST http://localhost:3000/cuisines HTTP/1.1 
+content-type: application/json
+
+{
+  "name":"Southern",
+  "description":"Usually deap-fried and buttered, no one can beat a southern Grandma's chicken."
+}
+
+### update a cuisine
+PUT http://localhost:3000/cuisines/62b32d17bfdce0a41f009704 HTTP/1.1
+content-type: application/json
+
+{
+  "name":"Southern",
+  "description":"Usually deap-fried."
+  }
+  
+### delete a cuisine
+DELETE http://localhost:3000/cuisines/62b32d17bfdce0a41f009704
