@@ -8,5 +8,9 @@ router.get('/:id', restaurantsController.getRestaurant);
 router.post('/', restaurantsController.createRestaurant);
 router.put('/:id', restaurantsController.updateRestaurant);
 router.delete('/:id', restaurantsController.deleteRestaurant);
+router.get(
+  '/excludeByZipCode/:zipCode',
+  restaurantsController.excludeRestaurantByZipCode
+);
 
 module.exports = router;

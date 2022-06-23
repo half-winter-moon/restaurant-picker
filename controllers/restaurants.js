@@ -121,12 +121,15 @@ const deleteRestaurant = async (req, res) => {
         .status(400)
         .json('Must use a valid restaurant id to delete a restaurant.');
     }
+
     const restaurantId = new ObjectId(req.params.id);
+
     const response = await mongodb
       .getDb()
       .db()
       .collection('restaurants')
       .remove({ _id: restaurantId }, true);
+
     if (response.deletedCount > 0) {
       res.status(204).send();
     } else {
@@ -139,10 +142,37 @@ const deleteRestaurant = async (req, res) => {
   }
 };
 
+const excludeRestaurantByZipCode = async (req, res) => {
+  try {
+    const zipCode = req.params.zipCode;
+    if (!zipCode) {
+      res
+        .status(400)
+        .json(
+          'Must use a valid Zip Code to look for what restaurants you do not like.'
+        );
+    }
+
+    const response = await mongodb
+      .getDb()
+      .db()
+      .collection('restaurants')
+      .find({ zipCode: { $not: { $eq: zipCode } } });
+
+    response.toArray().then((lists) => {
+      res.setHeader('Content-Type', 'application/json');
+      res.status(200).json(lists);
+    });
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+};
+
 module.exports = {
   getAllRestaurants,
   getRestaurant,
   createRestaurant,
   updateRestaurant,
   deleteRestaurant,
+  excludeRestaurantByZipCode,
 };
