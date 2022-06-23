@@ -8,7 +8,7 @@
 GET http://localhost:3000/restaurants
 
 ### Gets a restaurant by its ID
-GET http://localhost:3000/restaurants/62b39a41158ce93627c42dad
+GET http://localhost:3000/restaurants/62b3b2752174cc0c56ab33ba
 
 ### Creates a restaurant
 POST http://localhost:3000/restaurants HTTP/1.1 
@@ -133,3 +133,6 @@ DELETE http://localhost:3000/cuisines/62b32d17bfdce0a41f009704
 
 ### Gets all reviews
 GET http://localhost:3000/reviews
+
+### Gets a review by its ID
+GET http://localhost:3000/reviews/62b3f7c24129cb0be129e10c
