@@ -136,3 +136,13 @@ GET http://localhost:3000/reviews
 
 ### Gets a review by its ID
 GET http://localhost:3000/reviews/62b3f7c24129cb0be129e10c
+
+### Creates a review
+POST http://localhost:3000/reviews HTTP/1.1 
+content-type: application/json
+
+{
+  "postedBy": "User 2",
+  "restaurantId": "2",
+  "content": "This is another review"
+}

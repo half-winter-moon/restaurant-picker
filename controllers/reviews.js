@@ -37,7 +37,34 @@ const getReview = async (req, res) => {
   }
 };
 
+const createReview = async (req, res) => {
+  try {
+    const review = {
+      postedBy: req.body.postedBy,
+      restaurantId: req.body.restaurantId,
+      content: req.body.content,
+    };
+
+    const response = await mongodb
+      .getDb()
+      .db()
+      .collection('reviews')
+      .insertOne(review);
+
+    if (response.acknowledged) {
+      res.status(201).json(response);
+    } else {
+      res
+        .status(500)
+        .json(`An error occurred creating a review: ${response.error}`);
+    }
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+};
+
 module.exports = {
   getAllReviews,
   getReview,
+  createReview,
 };
