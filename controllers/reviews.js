@@ -63,8 +63,41 @@ const createReview = async (req, res) => {
   }
 };
 
+const updateReview = async (req, res) => {
+  try {
+    if (!ObjectId.isValid(req.params.id)) {
+      res.status(400).json('Must use a valid review id to update a review.');
+    }
+
+    const reviewId = new ObjectId(req.params.id);
+
+    const review = {
+      postedBy: req.body.postedBy,
+      restaurantId: req.body.restaurantId,
+      content: req.body.content,
+    };
+
+    const response = await mongodb
+      .getDb()
+      .db()
+      .collection('reviews')
+      .replaceOne({ _id: reviewId }, review);
+
+    if (response.modifiedCount > 0) {
+      res.status(204).send();
+    } else {
+      res
+        .status(500)
+        .json(`An error occurred updating a review: ${response.error}`);
+    }
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+};
+
 module.exports = {
   getAllReviews,
   getReview,
   createReview,
+  updateReview,
 };

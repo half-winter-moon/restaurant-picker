@@ -135,7 +135,7 @@ DELETE http://localhost:3000/cuisines/62b32d17bfdce0a41f009704
 GET http://localhost:3000/reviews
 
 ### Gets a review by its ID
-GET http://localhost:3000/reviews/62b3f7c24129cb0be129e10c
+GET http://localhost:3000/reviews/62b3fca276e0fc20611878c6
 
 ### Creates a review
 POST http://localhost:3000/reviews HTTP/1.1 
@@ -144,5 +144,15 @@ content-type: application/json
 {
   "postedBy": "User 2",
   "restaurantId": "2",
+  "content": "This is another review"
+}
+
+### Updates a restaurant
+PUT http://localhost:3000/reviews/62b3fca276e0fc20611878c6 HTTP/1.1 
+content-type: application/json
+
+{
+  "postedBy": "User 3",
+  "restaurantId": "3",
   "content": "This is another review"
 }
