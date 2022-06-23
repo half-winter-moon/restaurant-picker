@@ -95,9 +95,36 @@ const updateReview = async (req, res) => {
   }
 };
 
+const deleteReview = async (req, res) => {
+  try {
+    if (!ObjectId.isValid(req.params.id)) {
+      res.status(400).json('Must use a valid review id to delete a review.');
+    }
+
+    const reviewId = new ObjectId(req.params.id);
+
+    const response = await mongodb
+      .getDb()
+      .db()
+      .collection('reviews')
+      .remove({ _id: reviewId }, true);
+
+    if (response.deletedCount > 0) {
+      res.status(204).send();
+    } else {
+      res
+        .status(500)
+        .json(`An error occurred deleting a review: ${response.error}`);
+    }
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+};
+
 module.exports = {
   getAllReviews,
   getReview,
   createReview,
   updateReview,
+  deleteReview,
 };
