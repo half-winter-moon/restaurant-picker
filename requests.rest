@@ -126,3 +126,10 @@ content-type: application/json
   
 ### delete a cuisine
 DELETE http://localhost:3000/cuisines/62b32d17bfdce0a41f009704
+
+
+
+######## REVIEWS
+
+### Gets all reviews
+GET http://localhost:3000/reviews
