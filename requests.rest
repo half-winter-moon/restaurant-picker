@@ -16,10 +16,10 @@ content-type: application/json
 
 {
   "restaurantName": "New name",
-  "cuisine": "Whatever",
+  "cuisine": "Brazilian",
   "description": "A brief description about the restaurant",
   "address": "274 S 2nd W, Rexburg, ID 83440",
-  "zipCode": "34215",
+  "zipCode": "13452",
   "opens": "10am",
   "closes": "9pm",
   "phoneNumber": "208-356-9005",
@@ -55,8 +55,11 @@ content-type: application/json
 ### Gets restaurant that do not match such Zip Code
 GET http://localhost:3000/restaurants/excludeByZipCode/12345
 
+### Gets restaurant that do not match such Cuisine
+GET http://localhost:3000/restaurants/excludeByCuisine/Mexican
+
 ### Deletes a restaurant by its ID
-DELETE  http://localhost:3000/restaurants/62b39aa28e9b4068103a1ceb HTTP/1.1 
+DELETE  http://localhost:3000/restaurants/62b3ac39c2f688521a6317be HTTP/1.1 
 
 
 

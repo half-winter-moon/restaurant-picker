@@ -12,5 +12,9 @@ router.get(
   '/excludeByZipCode/:zipCode',
   restaurantsController.excludeRestaurantByZipCode
 );
+router.get(
+  '/excludeByCuisine/:cuisine',
+  restaurantsController.excludeRestaurantByCuisine
+);
 
 module.exports = router;
