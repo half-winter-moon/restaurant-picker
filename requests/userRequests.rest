@@ -15,9 +15,9 @@ POST http://localhost:3000/users HTTP/1.1
 content-type: application/json
 
 {
-  "name":"John",
-  "password":"123",
-  "email":"email@email.com"
+  "name":"Tanner",
+  "password":"12345",
+  "email":"tanner@tanner.com"
 }
 
 ### update a user

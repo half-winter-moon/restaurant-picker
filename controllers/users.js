@@ -25,6 +25,7 @@ const getUser = async (req, res) => {
       .db()
       .collection('users')
       .find({ _id: urlId });
+
     result.toArray().then((lists) => {
       res.setHeader('Content-Type', 'application/json');
       res.status(200).json(lists[0]);
@@ -42,11 +43,13 @@ const addUser = async (req, res) => {
       password: req.body.password,
       email: req.body.email,
     };
+
     const response = await mongodb
       .getDb()
       .db()
       .collection('users')
       .insertOne(user);
+
     if (response.acknowledged) {
       res.status(201).json(response);
     } else {
