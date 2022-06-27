@@ -51,7 +51,6 @@ const createRestaurant = async (req, res) => {
       closes: req.body.closes,
       phoneNumber: req.body.phoneNumber,
       restaurantWebsite: req.body.restaurantWebsite,
-      reviews: req.body.reviews,
     };
 
     const response = await mongodb
@@ -92,7 +91,6 @@ const updateRestaurant = async (req, res) => {
       closes: req.body.closes,
       phoneNumber: req.body.phoneNumber,
       restaurantWebsite: req.body.restaurantWebsite,
-      reviews: req.body.reviews,
     };
 
     const response = await mongodb

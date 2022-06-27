@@ -24,11 +24,6 @@ content-type: application/json
   "closes": "9pm",
   "phoneNumber": "208-356-9005",
   "restaurantWebsite": "example.com",
-  "reviews": [
-    "1",
-    "2",
-    "3"
-  ]
 }
 
 ### Updates a restaurant
@@ -45,11 +40,6 @@ content-type: application/json
   "closes": "9pm",
   "phoneNumber": "208-356-9005",
   "restaurantWebsite": "example.com",
-  "reviews": [
-    "1",
-    "2",
-    "3"
-  ]
 }
 
 ### Gets restaurant that do not match such Zip Code
