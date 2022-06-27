@@ -43,7 +43,7 @@ const createRestaurant = async (req, res) => {
   try {
     const restaurant = {
       restaurantName: req.body.restaurantName,
-      cuisine: req.body.cuisine,
+      cuisine: ObjectId(req.body.cuisine),
       description: req.body.description,
       address: req.body.address,
       zipCode: req.body.zipCode,
@@ -169,7 +169,8 @@ const excludeRestaurantByZipCode = async (req, res) => {
 
 const excludeRestaurantByCuisine = async (req, res) => {
   try {
-    const cuisine = req.params.cuisine;
+    const cuisine = ObjectId(req.params.cuisine);
+
     if (!cuisine) {
       res
         .status(400)

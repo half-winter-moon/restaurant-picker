@@ -15,11 +15,11 @@ POST http://localhost:3000/restaurants HTTP/1.1
 content-type: application/json
 
 {
-  "restaurantName": "New name",
-  "cuisine": "Brazilian",
+  "restaurantName": "Mexican Restaurant 2",
+  "cuisine": "62b9d03ba723d8b5d45f6a05",
   "description": "A brief description about the restaurant",
   "address": "274 S 2nd W, Rexburg, ID 83440",
-  "zipCode": "13452",
+  "zipCode": "12345",
   "opens": "10am",
   "closes": "9pm",
   "phoneNumber": "208-356-9005",

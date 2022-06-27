@@ -15,8 +15,8 @@ POST http://localhost:3000/cuisines HTTP/1.1
 content-type: application/json
 
 {
-  "name":"Southern",
-  "description":"Usually deap-fried and buttered, no one can beat a southern Grandma's chicken."
+  "name":"Italian",
+  "description":"You have never tried a better pizza"
 }
 
 ### update a cuisine
