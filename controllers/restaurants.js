@@ -83,7 +83,7 @@ const updateRestaurant = async (req, res) => {
 
     const restaurant = {
       restaurantName: req.body.restaurantName,
-      cuisine: req.body.cuisine,
+      cuisine: ObjectId(req.body.cuisine),
       description: req.body.description,
       address: req.body.address,
       zipCode: req.body.zipCode,
