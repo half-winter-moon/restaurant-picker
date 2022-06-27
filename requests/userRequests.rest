@@ -16,7 +16,6 @@ content-type: application/json
 
 {
   "name":"John",
-  "reviewsPosted":[],
   "password":"123",
   "email":"email@email.com"
 }
@@ -27,7 +26,6 @@ content-type: application/json
 
 {
   "name":"John Smith",
-  "reviewsPosted":[],
   "password":"123",
   "email":"email2@email.com"
   }
