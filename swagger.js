@@ -5,9 +5,9 @@ const doc = {
     title: 'My API',
     description: 'Description',
   },
-  host: 'localhost:3000',
-  // host: 'cse341-wedding-project.herokuapp.com',
-  schemes: ['http'], 
+  // host: 'localhost:3000',
+  host: 'cse341-wedding-project.herokuapp.com',
+  schemes: ['https'], 
 };
 
 const outputFile = './swagger.json';

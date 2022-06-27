@@ -20,5 +20,8 @@
     "swagger-ui-express": "^4.4.0",
     "validation-middleware": "^2.0.0",
     "validatorjs": "^3.22.1"
+  },
+  "devDependencies": {
+    "jest": "^28.1.1"
   }
 }

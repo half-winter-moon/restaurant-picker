@@ -5,15 +5,21 @@
     "description": "Description",
     "version": "1.0.0"
   },
-  "host": "localhost:3000",
+  "host": "cse341-wedding-project.herokuapp.com",
   "basePath": "/",
-  "schemes": ["http"],
+  "schemes": [
+    "https"
+  ],
   "paths": {
     "/restaurants/": {
       "get": {
-        "tags": ["Restaurants"],
+        "tags": [
+          "Restaurants"
+        ],
         "description": "",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [],
         "responses": {
           "200": {
@@ -25,7 +31,9 @@
         }
       },
       "post": {
-        "tags": ["Restaurants"],
+        "tags": [
+          "Restaurants"
+        ],
         "description": "",
         "parameters": [
           {
@@ -80,9 +88,13 @@
     },
     "/restaurants/{id}": {
       "get": {
-        "tags": ["Restaurants"],
+        "tags": [
+          "Restaurants"
+        ],
         "description": "",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -104,7 +116,9 @@
         }
       },
       "put": {
-        "tags": ["Restaurants"],
+        "tags": [
+          "Restaurants"
+        ],
         "description": "",
         "parameters": [
           {
@@ -166,7 +180,9 @@
         }
       },
       "delete": {
-        "tags": ["Restaurants"],
+        "tags": [
+          "Restaurants"
+        ],
         "description": "",
         "parameters": [
           {
@@ -191,9 +207,13 @@
     },
     "/restaurants/excludeByZipCode/{zipCode}": {
       "get": {
-        "tags": ["Restaurants"],
+        "tags": [
+          "Restaurants"
+        ],
         "description": "",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "zipCode",
@@ -217,9 +237,13 @@
     },
     "/restaurants/excludeByCuisine/{cuisine}": {
       "get": {
-        "tags": ["Restaurants"],
+        "tags": [
+          "Restaurants"
+        ],
         "description": "",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "cuisine",
@@ -243,9 +267,13 @@
     },
     "/users/": {
       "get": {
-        "tags": ["Users"],
+        "tags": [
+          "Users"
+        ],
         "description": "",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [],
         "responses": {
           "200": {
@@ -257,7 +285,9 @@
         }
       },
       "post": {
-        "tags": ["Users"],
+        "tags": [
+          "Users"
+        ],
         "description": "",
         "parameters": [
           {
@@ -297,9 +327,13 @@
     },
     "/users/{id}": {
       "get": {
-        "tags": ["Users"],
+        "tags": [
+          "Users"
+        ],
         "description": "",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -318,7 +352,9 @@
         }
       },
       "put": {
-        "tags": ["Users"],
+        "tags": [
+          "Users"
+        ],
         "description": "",
         "parameters": [
           {
@@ -362,7 +398,9 @@
         }
       },
       "delete": {
-        "tags": ["Users"],
+        "tags": [
+          "Users"
+        ],
         "description": "",
         "parameters": [
           {
@@ -384,9 +422,13 @@
     },
     "/cuisines/": {
       "get": {
-        "tags": ["Cuisines"],
+        "tags": [
+          "Cuisines"
+        ],
         "description": "",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [],
         "responses": {
           "200": {
@@ -398,7 +440,9 @@
         }
       },
       "post": {
-        "tags": ["Cuisines"],
+        "tags": [
+          "Cuisines"
+        ],
         "description": "",
         "parameters": [
           {
@@ -432,9 +476,13 @@
     },
     "/cuisines/{id}": {
       "get": {
-        "tags": ["Cuisines"],
+        "tags": [
+          "Cuisines"
+        ],
         "description": "",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -453,7 +501,9 @@
         }
       },
       "put": {
-        "tags": ["Cuisines"],
+        "tags": [
+          "Cuisines"
+        ],
         "description": "",
         "parameters": [
           {
@@ -491,7 +541,9 @@
         }
       },
       "delete": {
-        "tags": ["Cuisines"],
+        "tags": [
+          "Cuisines"
+        ],
         "description": "",
         "parameters": [
           {
@@ -513,9 +565,13 @@
     },
     "/reviews/": {
       "get": {
-        "tags": ["Reviews"],
+        "tags": [
+          "Reviews"
+        ],
         "description": "",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [],
         "responses": {
           "200": {
@@ -527,7 +583,9 @@
         }
       },
       "post": {
-        "tags": ["Reviews"],
+        "tags": [
+          "Reviews"
+        ],
         "description": "",
         "parameters": [
           {
@@ -561,9 +619,13 @@
     },
     "/reviews/{id}": {
       "get": {
-        "tags": ["Reviews"],
+        "tags": [
+          "Reviews"
+        ],
         "description": "",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -585,7 +647,9 @@
         }
       },
       "put": {
-        "tags": ["Reviews"],
+        "tags": [
+          "Reviews"
+        ],
         "description": "",
         "parameters": [
           {
@@ -626,7 +690,9 @@
         }
       },
       "delete": {
-        "tags": ["Reviews"],
+        "tags": [
+          "Reviews"
+        ],
         "description": "",
         "parameters": [
           {
