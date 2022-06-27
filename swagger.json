@@ -35,34 +35,31 @@
               "type": "object",
               "properties": {
                 "restaurantName": {
-                  "example": "any"
+                  "example": "Korean Restaurant"
                 },
                 "cuisine": {
-                  "example": "any"
+                  "example": "62b9f1ba647a293727fb4f98"
                 },
                 "description": {
-                  "example": "any"
+                  "example": "A brief description about the restaurant"
                 },
                 "address": {
-                  "example": "any"
+                  "example": "274 S 2nd W, Rexburg, ID 83440"
                 },
                 "zipCode": {
-                  "example": "any"
+                  "example": "54321"
                 },
                 "opens": {
-                  "example": "any"
+                  "example": "10am"
                 },
                 "closes": {
-                  "example": "any"
+                  "example": "10pm"
                 },
                 "phoneNumber": {
-                  "example": "any"
+                  "example": "208-356-9005"
                 },
                 "restaurantWebsite": {
-                  "example": "any"
-                },
-                "reviews": {
-                  "example": "any"
+                  "example": "example.com"
                 }
               }
             }
@@ -71,6 +68,9 @@
         "responses": {
           "201": {
             "description": "Created"
+          },
+          "412": {
+            "description": "Precondition Failed"
           },
           "500": {
             "description": "Internal Server Error"
@@ -120,34 +120,31 @@
               "type": "object",
               "properties": {
                 "restaurantName": {
-                  "example": "any"
+                  "example": "Korean Restaurant"
                 },
                 "cuisine": {
-                  "example": "any"
+                  "example": "62b9f1ba647a293727fb4f98"
                 },
                 "description": {
-                  "example": "any"
+                  "example": "A brief description about the restaurant"
                 },
                 "address": {
-                  "example": "any"
+                  "example": "274 S 2nd W, Rexburg, ID 83440"
                 },
                 "zipCode": {
-                  "example": "any"
+                  "example": "29387"
                 },
                 "opens": {
-                  "example": "any"
+                  "example": "10am"
                 },
                 "closes": {
-                  "example": "any"
+                  "example": "10pm"
                 },
                 "phoneNumber": {
-                  "example": "any"
+                  "example": "208-356-9005"
                 },
                 "restaurantWebsite": {
-                  "example": "any"
-                },
-                "reviews": {
-                  "example": "any"
+                  "example": "example.com"
                 }
               }
             }
@@ -159,6 +156,9 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "412": {
+            "description": "Precondition Failed"
           },
           "500": {
             "description": "Internal Server Error"
@@ -267,16 +267,13 @@
               "type": "object",
               "properties": {
                 "name": {
-                  "example": "any"
-                },
-                "reviewsPosted": {
-                  "example": "any"
+                  "example": "test"
                 },
                 "password": {
-                  "example": "any"
+                  "example": "12345"
                 },
                 "email": {
-                  "example": "any"
+                  "example": "test@gmail.com"
                 }
               }
             }
@@ -334,16 +331,13 @@
               "type": "object",
               "properties": {
                 "name": {
-                  "example": "any"
-                },
-                "reviewsPosted": {
-                  "example": "any"
+                  "example": "test"
                 },
                 "password": {
-                  "example": "any"
+                  "example": "12345"
                 },
                 "email": {
-                  "example": "any"
+                  "example": "test@gmail.com"
                 }
               }
             }
@@ -408,10 +402,10 @@
               "type": "object",
               "properties": {
                 "name": {
-                  "example": "any"
+                  "example": "Hawaiian"
                 },
                 "description": {
-                  "example": "any"
+                  "example": "Best fish in town"
                 }
               }
             }
@@ -469,10 +463,10 @@
               "type": "object",
               "properties": {
                 "name": {
-                  "example": "any"
+                  "example": "Hawaiian"
                 },
                 "description": {
-                  "example": "any"
+                  "example": "Worst fish in town"
                 }
               }
             }
@@ -537,13 +531,13 @@
               "type": "object",
               "properties": {
                 "postedBy": {
-                  "example": "any"
+                  "example": "62b9e29cc8da181ea71296d6"
                 },
                 "restaurantId": {
-                  "example": "any"
+                  "example": "62b9d069a723d8b5d45f6a07"
                 },
                 "content": {
-                  "example": "any"
+                  "example": "This is a review by someone about such restaurant"
                 }
               }
             }
@@ -552,6 +546,9 @@
         "responses": {
           "201": {
             "description": "Created"
+          },
+          "412": {
+            "description": "Precondition Failed"
           },
           "500": {
             "description": "Internal Server Error"
@@ -619,6 +616,9 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "412": {
+            "description": "Precondition Failed"
           },
           "500": {
             "description": "Internal Server Error"
