@@ -7,16 +7,13 @@
   },
   "host": "localhost:3000",
   "basePath": "/",
-  "schemes": [
-    "http"
-  ],
+  "schemes": ["http"],
   "paths": {
     "/restaurants/": {
       "get": {
+        "tags": ["Restaurants"],
         "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "parameters": [],
         "responses": {
           "200": {
@@ -28,6 +25,7 @@
         }
       },
       "post": {
+        "tags": ["Restaurants"],
         "description": "",
         "parameters": [
           {
@@ -82,10 +80,9 @@
     },
     "/restaurants/{id}": {
       "get": {
+        "tags": ["Restaurants"],
         "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "parameters": [
           {
             "name": "id",
@@ -107,6 +104,7 @@
         }
       },
       "put": {
+        "tags": ["Restaurants"],
         "description": "",
         "parameters": [
           {
@@ -168,6 +166,7 @@
         }
       },
       "delete": {
+        "tags": ["Restaurants"],
         "description": "",
         "parameters": [
           {
@@ -192,10 +191,9 @@
     },
     "/restaurants/excludeByZipCode/{zipCode}": {
       "get": {
+        "tags": ["Restaurants"],
         "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "parameters": [
           {
             "name": "zipCode",
@@ -219,10 +217,9 @@
     },
     "/restaurants/excludeByCuisine/{cuisine}": {
       "get": {
+        "tags": ["Restaurants"],
         "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "parameters": [
           {
             "name": "cuisine",
@@ -246,10 +243,9 @@
     },
     "/users/": {
       "get": {
+        "tags": ["Users"],
         "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "parameters": [],
         "responses": {
           "200": {
@@ -261,6 +257,7 @@
         }
       },
       "post": {
+        "tags": ["Users"],
         "description": "",
         "parameters": [
           {
@@ -300,10 +297,9 @@
     },
     "/users/{id}": {
       "get": {
+        "tags": ["Users"],
         "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "parameters": [
           {
             "name": "id",
@@ -322,6 +318,7 @@
         }
       },
       "put": {
+        "tags": ["Users"],
         "description": "",
         "parameters": [
           {
@@ -365,6 +362,7 @@
         }
       },
       "delete": {
+        "tags": ["Users"],
         "description": "",
         "parameters": [
           {
@@ -386,10 +384,9 @@
     },
     "/cuisines/": {
       "get": {
+        "tags": ["Cuisines"],
         "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "parameters": [],
         "responses": {
           "200": {
@@ -401,6 +398,7 @@
         }
       },
       "post": {
+        "tags": ["Cuisines"],
         "description": "",
         "parameters": [
           {
@@ -434,10 +432,9 @@
     },
     "/cuisines/{id}": {
       "get": {
+        "tags": ["Cuisines"],
         "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "parameters": [
           {
             "name": "id",
@@ -456,6 +453,7 @@
         }
       },
       "put": {
+        "tags": ["Cuisines"],
         "description": "",
         "parameters": [
           {
@@ -493,6 +491,7 @@
         }
       },
       "delete": {
+        "tags": ["Cuisines"],
         "description": "",
         "parameters": [
           {
@@ -514,10 +513,9 @@
     },
     "/reviews/": {
       "get": {
+        "tags": ["Reviews"],
         "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "parameters": [],
         "responses": {
           "200": {
@@ -529,6 +527,7 @@
         }
       },
       "post": {
+        "tags": ["Reviews"],
         "description": "",
         "parameters": [
           {
@@ -562,10 +561,9 @@
     },
     "/reviews/{id}": {
       "get": {
+        "tags": ["Reviews"],
         "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "parameters": [
           {
             "name": "id",
@@ -587,6 +585,7 @@
         }
       },
       "put": {
+        "tags": ["Reviews"],
         "description": "",
         "parameters": [
           {
@@ -627,6 +626,7 @@
         }
       },
       "delete": {
+        "tags": ["Reviews"],
         "description": "",
         "parameters": [
           {
