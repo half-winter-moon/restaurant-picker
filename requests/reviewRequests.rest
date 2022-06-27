@@ -15,9 +15,9 @@ POST http://localhost:3000/reviews HTTP/1.1
 content-type: application/json
 
 {
-  "postedBy": "User 2",
-  "restaurantId": "2",
-  "content": "This is another review"
+  "postedBy": "62b9e29cc8da181ea71296d6",
+  "restaurantId": "62b9d069a723d8b5d45f6a07",
+  "content": "This is a review by Tanner about the Mexican restaurant"
 }
 
 ### Updates a restaurant by its ID

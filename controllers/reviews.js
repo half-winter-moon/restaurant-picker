@@ -40,8 +40,8 @@ const getReview = async (req, res) => {
 const createReview = async (req, res) => {
   try {
     const review = {
-      postedBy: req.body.postedBy,
-      restaurantId: req.body.restaurantId,
+      postedBy: ObjectId(req.body.postedBy),
+      restaurantId: ObjectId(req.body.restaurantId),
       content: req.body.content,
     };
 
@@ -72,8 +72,8 @@ const updateReview = async (req, res) => {
     const reviewId = new ObjectId(req.params.id);
 
     const review = {
-      postedBy: req.body.postedBy,
-      restaurantId: req.body.restaurantId,
+      postedBy: ObjectId(req.body.postedBy),
+      restaurantId: ObjectId(req.body.restaurantId),
       content: req.body.content,
     };
 
