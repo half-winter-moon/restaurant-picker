@@ -6,7 +6,7 @@ const doc = {
     description: 'Description',
   },
   // host: 'localhost:3000',
-  host: 'cse341-wedding-project.herokuapp.com',
+  host: 'cse341-restaurant-picker.herokuapp.com',
   schemes: ['https'], 
 };
 
