@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node --experimental-vm-modules node_modules/.bin/jest --coverage",
     "start": "node server.js",
     "swagger-autogen": "node ./swagger.js"
   },
@@ -22,6 +22,8 @@
     "validatorjs": "^3.22.1"
   },
   "devDependencies": {
-    "jest": "^28.1.1"
+    "@shelf/jest-mongodb": "^3.0.1",
+    "jest": "^28.1.2",
+    "supertest": "^6.2.3"
   }
 }
