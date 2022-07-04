@@ -7,20 +7,28 @@
   },
   "host": "cse341-restaurant-picker.herokuapp.com",
   "basePath": "/",
-  "schemes": [
-    "https"
+  "schemes": ["https"],
+  "tags": [
+    {
+      "name": "Restaurants",
+      "description": "Find your local Restaurants",
+      "externalDocs": {
+        "description": "Find out more restaurants",
+        "url": "https://www.google.com/maps/search/restaurants/@43.8217908,-111.7934976,15z"
+      }
+    }
   ],
   "paths": {
     "/restaurants/": {
       "get": {
-        "tags": [
-          "Restaurants"
-        ],
+        "summary": "Gets all restaurants",
+        "tags": ["Restaurants"],
         "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "parameters": [],
+        "security": {
+          "restaurant_auth": ["write:restaurants", "read:restaurants"]
+        },
         "responses": {
           "200": {
             "description": "OK"
@@ -31,10 +39,9 @@
         }
       },
       "post": {
-        "tags": [
-          "Restaurants"
-        ],
-        "description": "",
+        "summary": "Creates a restaurant",
+        "tags": ["Restaurants"],
+        "description": "When creating a restaurant, use the cuisine _id to reference which cuisine it belongs to. Could be done using a dropdown and passing the _id as a value",
         "parameters": [
           {
             "name": "body",
@@ -88,13 +95,10 @@
     },
     "/restaurants/{id}": {
       "get": {
-        "tags": [
-          "Restaurants"
-        ],
+        "summary": "Gets a restaurant by its ID",
+        "tags": ["Restaurants"],
         "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "parameters": [
           {
             "name": "id",
@@ -116,10 +120,9 @@
         }
       },
       "put": {
-        "tags": [
-          "Restaurants"
-        ],
-        "description": "",
+        "summary": "Updates a restaurant by its ID",
+        "tags": ["Restaurants"],
+        "description": "When updating a restaurant, use the cuisine _id to reference which cuisine it belongs to. Could be done using a dropdown and passing the _id as a value",
         "parameters": [
           {
             "name": "id",
@@ -180,9 +183,8 @@
         }
       },
       "delete": {
-        "tags": [
-          "Restaurants"
-        ],
+        "summary": "Deletes a restaurant by its ID",
+        "tags": ["Restaurants"],
         "description": "",
         "parameters": [
           {
@@ -207,13 +209,10 @@
     },
     "/restaurants/excludeByZipCode/{zipCode}": {
       "get": {
-        "tags": [
-          "Restaurants"
-        ],
+        "summary": "Gets all restaurants except the ones that match such Zip Code",
+        "tags": ["Restaurants"],
         "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "parameters": [
           {
             "name": "zipCode",
@@ -237,13 +236,10 @@
     },
     "/restaurants/excludeByCuisine/{cuisine}": {
       "get": {
-        "tags": [
-          "Restaurants"
-        ],
+        "summary": "Gets all restaurants except the ones that match such Cuisine",
+        "tags": ["Restaurants"],
         "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "parameters": [
           {
             "name": "cuisine",
@@ -267,13 +263,9 @@
     },
     "/users/": {
       "get": {
-        "tags": [
-          "Users"
-        ],
+        "tags": ["Users"],
         "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "parameters": [],
         "responses": {
           "200": {
@@ -285,9 +277,7 @@
         }
       },
       "post": {
-        "tags": [
-          "Users"
-        ],
+        "tags": ["Users"],
         "description": "",
         "parameters": [
           {
@@ -324,13 +314,9 @@
     },
     "/users/{id}": {
       "get": {
-        "tags": [
-          "Users"
-        ],
+        "tags": ["Users"],
         "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "parameters": [
           {
             "name": "id",
@@ -349,9 +335,7 @@
         }
       },
       "put": {
-        "tags": [
-          "Users"
-        ],
+        "tags": ["Users"],
         "description": "",
         "parameters": [
           {
@@ -392,9 +376,7 @@
         }
       },
       "delete": {
-        "tags": [
-          "Users"
-        ],
+        "tags": ["Users"],
         "description": "",
         "parameters": [
           {
@@ -416,13 +398,9 @@
     },
     "/cuisines/": {
       "get": {
-        "tags": [
-          "Cuisines"
-        ],
+        "tags": ["Cuisines"],
         "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "parameters": [],
         "responses": {
           "200": {
@@ -434,9 +412,7 @@
         }
       },
       "post": {
-        "tags": [
-          "Cuisines"
-        ],
+        "tags": ["Cuisines"],
         "description": "",
         "parameters": [
           {
@@ -470,13 +446,9 @@
     },
     "/cuisines/{id}": {
       "get": {
-        "tags": [
-          "Cuisines"
-        ],
+        "tags": ["Cuisines"],
         "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "parameters": [
           {
             "name": "id",
@@ -495,9 +467,7 @@
         }
       },
       "put": {
-        "tags": [
-          "Cuisines"
-        ],
+        "tags": ["Cuisines"],
         "description": "",
         "parameters": [
           {
@@ -535,9 +505,7 @@
         }
       },
       "delete": {
-        "tags": [
-          "Cuisines"
-        ],
+        "tags": ["Cuisines"],
         "description": "",
         "parameters": [
           {
@@ -559,13 +527,9 @@
     },
     "/reviews/": {
       "get": {
-        "tags": [
-          "Reviews"
-        ],
+        "tags": ["Reviews"],
         "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "parameters": [],
         "responses": {
           "200": {
@@ -577,9 +541,7 @@
         }
       },
       "post": {
-        "tags": [
-          "Reviews"
-        ],
+        "tags": ["Reviews"],
         "description": "",
         "parameters": [
           {
@@ -616,13 +578,9 @@
     },
     "/reviews/{id}": {
       "get": {
-        "tags": [
-          "Reviews"
-        ],
+        "tags": ["Reviews"],
         "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "parameters": [
           {
             "name": "id",
@@ -644,9 +602,7 @@
         }
       },
       "put": {
-        "tags": [
-          "Reviews"
-        ],
+        "tags": ["Reviews"],
         "description": "",
         "parameters": [
           {
@@ -690,9 +646,7 @@
         }
       },
       "delete": {
-        "tags": [
-          "Reviews"
-        ],
+        "tags": ["Reviews"],
         "description": "",
         "parameters": [
           {
