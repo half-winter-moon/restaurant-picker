@@ -43,14 +43,10 @@ app.get('/', (req, res) => {
   res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
 });
 
-app.get('/profile', requiresAuth(), (req, res) => {
-  res.send(JSON.stringify(req.oidc.user, null, 2));
-});
-
-app.use('/restaurants', restaurantsRoutes);
-app.use('/users', usersRoutes);
+app.use('/restaurants', requiresAuth(), restaurantsRoutes);
+app.use('/users', requiresAuth(), usersRoutes);
 app.use('/cuisines', cuisinesRoutes);
-app.use('/reviews', reviewsController);
+app.use('/reviews', requiresAuth(), reviewsController);
 
 mongodb.initDb((err) => {
   if (err) {
