@@ -1,4 +1,4 @@
-const cuisines = require('../routes/restaurants');
+const cuisines = require('../routes/cuisines');
 
 const request = require('supertest');
 const express = require('express');
