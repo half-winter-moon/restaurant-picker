@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+const { auth, requiresAuth } = require('express-openid-connect');
 
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('./swagger.json');
@@ -18,6 +19,17 @@ var options = {
 const port = process.env.PORT || 3000;
 const app = express();
 
+const config = {
+  authRequired: false,
+  auth0Logout: true,
+  secret: process.env.SECRET,
+  baseURL: process.env.BASE_URL,
+  clientID: process.env.CLIENT_ID,
+  issuerBaseURL: process.env.ISSUER_BASE_URL,
+};
+
+app.use(auth(config));
+
 app
   .use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument, options))
   .use(cors())
@@ -26,6 +38,14 @@ app
     res.setHeader('Access-Control-Allow-Origin', '*');
     next();
   });
+
+app.get('/', (req, res) => {
+  res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
+});
+
+app.get('/profile', requiresAuth(), (req, res) => {
+  res.send(JSON.stringify(req.oidc.user, null, 2));
+});
 
 app.use('/restaurants', restaurantsRoutes);
 app.use('/users', usersRoutes);
