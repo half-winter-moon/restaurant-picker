@@ -3,7 +3,7 @@ const validator = require('./validate.js');
 const saveRestaurant = (req, res, next) => {
   const validationRule = {
     restaurantName: 'required|string',
-    cuisine: 'required|ObjectId',
+    cuisine: 'required|string',
     description: 'required|string',
     address: 'required|string',
     zipCode: 'required|string',
@@ -27,8 +27,8 @@ const saveRestaurant = (req, res, next) => {
 
 const saveReview = (req, res, next) => {
   const validationRule = {
-    postedBy: 'required|ObjectId',
-    restaurantId: 'required|ObjectId',
+    postedBy: 'required|string',
+    restaurantId: 'required|string',
     content: 'required|string',
   };
   validator(req.body, validationRule, {}, (err, status) => {
