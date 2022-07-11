@@ -1,10 +1,10 @@
 const request = require('supertest');
 
-describe('Restaurant Test Suite', () => {
+describe('Restaurants Test Suite', () => {
   const restaurant = {
-    _id: '62b9d069a723d8b5d45f6a07',
-    restaurantName: 'Mexican Restaurant',
-    cuisine: '62b9d03ba723d8b5d45f6a05',
+    _id: '62cc3e4fb16ca999a72c36f3',
+    restaurantName: 'Japanesse Restaurant',
+    cuisine: '62b1d9b8ffeaf1c954d35584',
     description: 'A brief description about the restaurant',
     address: '274 S 2nd W, Rexburg, ID 83440',
     zipCode: '13452',
@@ -16,7 +16,7 @@ describe('Restaurant Test Suite', () => {
 
   it('test get /:id endpoints', async () => {
     const response = await request('http://localhost:3000').get(
-      '/restaurants/62b9d069a723d8b5d45f6a07'
+      '/restaurants/62cc3e4fb16ca999a72c36f3'
     );
 
     expect(response.body).toEqual(restaurant);
@@ -24,7 +24,7 @@ describe('Restaurant Test Suite', () => {
   });
 
   it('test post / endpoints', async () => {
-    const restaurantPost = {
+    const newRestaurant = {
       restaurantName: 'Japanesse Restaurant',
       cuisine: '62b1d9b8ffeaf1c954d35584',
       description: 'A brief description about the restaurant',
@@ -37,15 +37,15 @@ describe('Restaurant Test Suite', () => {
     };
 
     const response = await request('http://localhost:3000')
-      .post('/restaurants')
-      .send(restaurantPost);
+      .post('/reviews')
+      .send(newRestaurant);
 
     expect(response.statusCode).toBe(201);
   });
 
   it('test delete /:id endpoints', async () => {
     const response = await request('http://localhost:3000').delete(
-      '/restaurants/62b9cfd3a723d8b5d45f6a04'
+      '/restaurants/62cc3e4fb16ca999a72c36f3'
     );
     expect(response.statusCode).toBe(204);
   });

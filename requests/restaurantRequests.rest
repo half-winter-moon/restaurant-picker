@@ -8,7 +8,7 @@
 GET http://localhost:3000/restaurants
 
 ### Gets a restaurant by its ID
-GET http://localhost:3000/restaurants/62b9cfd3a723d8b5d45f6a04
+GET http://localhost:3000/restaurants/62cc3e4fb16ca999a72c36f3
 
 ### Creates a restaurant
 POST http://localhost:3000/restaurants HTTP/1.1 
@@ -23,7 +23,7 @@ content-type: application/json
   "opens": "10am",
   "closes": "9pm",
   "phoneNumber": "208-356-9005",
-  "restaurantWebsite": "example.com",
+  "restaurantWebsite": "example.com"
 }
 
 ### Updates a restaurant

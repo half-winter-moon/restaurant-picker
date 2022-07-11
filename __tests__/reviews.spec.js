@@ -1,40 +1,40 @@
-const request = require('supertest');
+// const request = require('supertest');
 
-describe('Reviews Test Suite', () => {
-  const review = {
-    _id: '62b9e5715b60a18abcc2bb32',
-    postedBy: '62b9e275c8da181ea71296d3',
-    restaurantId: '62b9cfd3a723d8b5d45f6a04',
-    content: 'This is a review by Kevin W about the Japanesse restaurant',
-  };
+// describe('Reviews Test Suite', () => {
+//   const review = {
+//     _id: '62b9e5a95b60a18abcc2bb34',
+//     postedBy: '62b9e28cc8da181ea71296d5',
+//     restaurantId: '62b3b24e2174cc0c56ab33b5',
+//     content: 'This is a review by Jennie about the Southern restaurant',
+//   };
 
-  it('test get /:id endpoints', async () => {
-    const response = await request('http://localhost:3000').get(
-      '/reviews/62b9e5715b60a18abcc2bb32'
-    );
+//   it('test get /:id endpoints', async () => {
+//     const response = await request('http://localhost:3000').get(
+//       '/reviews/62b9e5a95b60a18abcc2bb34'
+//     );
 
-    expect(response.body).toEqual(review);
-    expect(response.statusCode).toBe(200);
-  });
+//     expect(response.body).toEqual(review);
+//     expect(response.statusCode).toBe(200);
+//   });
 
-  it('test post / endpoints', async () => {
-    const review = {
-      postedBy: '62b9e29cc8da181ea71296d6',
-      restaurantId: '62b9d069a723d8b5d45f6a07',
-      content: 'This is a review by Tanner about the Mexican restaurant',
-    };
+//   it('test post / endpoints', async () => {
+//     const review = {
+//       postedBy: '62b9e28cc8da181ea71296d5',
+//       restaurantId: '62b3b24e2174cc0c56ab33b5',
+//       content: 'This is a review by Jennie about the Southern restaurant',
+//     };
 
-    const response = await request('http://localhost:3000')
-      .post('/reviews')
-      .send(review);
+//     const response = await request('http://localhost:3000')
+//       .post('/reviews')
+//       .send(review);
 
-    expect(response.statusCode).toBe(201);
-  });
+//     expect(response.statusCode).toBe(201);
+//   });
 
-  it('test delete /:id endpoints', async () => {
-    const response = await request('http://localhost:3000').delete(
-      '/reviews/62b9e5715b60a18abcc2bb32'
-    );
-    expect(response.statusCode).toBe(204);
-  });
-});
+//   it('test delete /:id endpoints', async () => {
+//     const response = await request('http://localhost:3000').delete(
+//       '/reviews/62b9e5a95b60a18abcc2bb34'
+//     );
+//     expect(response.statusCode).toBe(204);
+//   });
+// });
