@@ -8,7 +8,7 @@
 GET http://localhost:3000/reviews
 
 ### Gets a review by its ID
-GET http://localhost:3000/reviews/62b3fca276e0fc20611878c6
+GET http://localhost:3000/reviews/62b9e5715b60a18abcc2bb32
 
 ### Creates a review
 POST http://localhost:3000/reviews HTTP/1.1 

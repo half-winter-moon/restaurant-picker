@@ -8,7 +8,7 @@
 GET http://localhost:3000/restaurants
 
 ### Gets a restaurant by its ID
-GET http://localhost:3000/restaurants/62b3b2752174cc0c56ab33ba
+GET http://localhost:3000/restaurants/62b9cfd3a723d8b5d45f6a04
 
 ### Creates a restaurant
 POST http://localhost:3000/restaurants HTTP/1.1 
