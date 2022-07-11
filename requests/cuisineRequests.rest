@@ -20,13 +20,13 @@ content-type: application/json
 }
 
 ### update a cuisine
-PUT http://localhost:3000/cuisines/62b32d17bfdce0a41f009704 HTTP/1.1
+PUT http://localhost:3000/cuisines/62cc39aeead864d66276c7e3 HTTP/1.1
 content-type: application/json
 
 {
-  "name":"Southern",
-  "description":"Usually deap-fried."
+  "name":"Korean",
+  "description":"BBQ."
   }
   
 ### delete a cuisine
-DELETE http://localhost:3000/cuisines/62b32d17bfdce0a41f009704
+DELETE http://localhost:3000/cuisines/62cc39f0ead864d66276c7e4
