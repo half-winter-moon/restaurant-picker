@@ -40,24 +40,24 @@ const usersArray = [
     debug: true,
   },
   {
-    _id: '62ce61dc9bada2c3b6bb0746',
+    _id: '62ced74d94bbe49ac667cf8d',
     name: 'Test User',
     password: '12345',
     email: 'test@test.com',
   },
   {
-    _id: '62ce63fcd61892d6d733ddce',
-    name: 'Test User',
+    _id: '62ced867ced931358aaea4b4',
+    name: 'Jon Smith',
     password: '12345',
-    email: 'test@test.com',
+    email: 'test@gmail.com',
   },
 ];
 
 const user = {
-  _id: '62ce63fcd61892d6d733ddce',
-  name: 'Test User',
+  _id: '62ced867ced931358aaea4b4',
+  name: 'Jon Smith',
   password: '12345',
-  email: 'test@test.com',
+  email: 'test@gmail.com',
 };
 
 describe('user Test Suite', () => {
@@ -70,7 +70,7 @@ describe('user Test Suite', () => {
 
   it('test get /:id endpoints', async () => {
     const response = await request('http://localhost:3000').get(
-      '/users/62ce63fcd61892d6d733ddce'
+      '/users/62ced867ced931358aaea4b4'
     );
     expect(response.body).toEqual(user);
     expect(response.statusCode).toBe(200);
@@ -91,7 +91,7 @@ describe('user Test Suite', () => {
 
   it('test delete /:id endpoints', async () => {
     const response = await request('http://localhost:3000').delete(
-      '/users/62ce63fcd61892d6d733ddce'
+      '/users/62ced867ced931358aaea4b4'
     );
     expect(response.statusCode).toBe(204);
   });
