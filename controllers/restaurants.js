@@ -51,6 +51,7 @@ const createRestaurant = async (req, res) => {
       closes: req.body.closes,
       phoneNumber: req.body.phoneNumber,
       restaurantWebsite: req.body.restaurantWebsite,
+      imgUrl: req.body.imgUrl,
     };
 
     const response = await mongodb
@@ -91,6 +92,7 @@ const updateRestaurant = async (req, res) => {
       closes: req.body.closes,
       phoneNumber: req.body.phoneNumber,
       restaurantWebsite: req.body.restaurantWebsite,
+      imgUrl: req.body.imgUrl,
     };
 
     const response = await mongodb
