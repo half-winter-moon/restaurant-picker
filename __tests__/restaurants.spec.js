@@ -2,21 +2,22 @@ const request = require('supertest');
 
 describe('Restaurants Test Suite', () => {
   const restaurant = {
-    _id: '62cc3e4fb16ca999a72c36f3',
-    restaurantName: 'Japanesse Restaurant',
-    cuisine: '62b1d9b8ffeaf1c954d35584',
+    _id: '62ce5e013c9413674ed7a407',
+    restaurantName: 'Korean Restaurant',
+    cuisine: '62b9f1ba647a293727fb4f98',
     description: 'A brief description about the restaurant',
     address: '274 S 2nd W, Rexburg, ID 83440',
-    zipCode: '13452',
+    zipCode: "'54321'",
     opens: '10am',
-    closes: '9pm',
+    closes: '10pm',
     phoneNumber: '208-356-9005',
     restaurantWebsite: 'example.com',
+    imgUrl: null,
   };
 
   it('test get /:id endpoints', async () => {
     const response = await request('http://localhost:3000').get(
-      '/restaurants/62cc3e4fb16ca999a72c36f3'
+      '/restaurants/62ce5e013c9413674ed7a407'
     );
 
     expect(response.body).toEqual(restaurant);
@@ -25,19 +26,19 @@ describe('Restaurants Test Suite', () => {
 
   it('test post / endpoints', async () => {
     const newRestaurant = {
-      restaurantName: 'Japanesse Restaurant',
-      cuisine: '62b1d9b8ffeaf1c954d35584',
+      restaurantName: 'Korean Restaurant',
+      cuisine: '62b9f1ba647a293727fb4f98',
       description: 'A brief description about the restaurant',
       address: '274 S 2nd W, Rexburg, ID 83440',
-      zipCode: '13452',
+      zipCode: "'54321'",
       opens: '10am',
-      closes: '9pm',
+      closes: '10pm',
       phoneNumber: '208-356-9005',
       restaurantWebsite: 'example.com',
     };
 
     const response = await request('http://localhost:3000')
-      .post('/reviews')
+      .post('/restaurants')
       .send(newRestaurant);
 
     expect(response.statusCode).toBe(201);
@@ -45,8 +46,9 @@ describe('Restaurants Test Suite', () => {
 
   it('test delete /:id endpoints', async () => {
     const response = await request('http://localhost:3000').delete(
-      '/restaurants/62cc3e4fb16ca999a72c36f3'
+      '/restaurants/62ce5e013c9413674ed7a407'
     );
+
     expect(response.statusCode).toBe(204);
   });
 });
