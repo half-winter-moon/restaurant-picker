@@ -80,7 +80,13 @@ const reviewsArray = [
     content: 'This is a review by Jennie about the Southern restaurant',
   },
   {
-    _id: '62ce656a328690aa5a476a6e',
+    _id: '62ced35c74545c504ca7dff5',
+    postedBy: '62b9e28cc8da181ea71296d5',
+    restaurantId: '62b3b24e2174cc0c56ab33b5',
+    content: 'This is a review by Jennie about the Southern restaurant',
+  },
+  {
+    _id: '62ced74e94bbe49ac667cf8f',
     postedBy: '62b9e28cc8da181ea71296d5',
     restaurantId: '62b3b24e2174cc0c56ab33b5',
     content: 'This is a review by Jennie about the Southern restaurant',
@@ -88,7 +94,7 @@ const reviewsArray = [
 ];
 
 const review = {
-  _id: '62ce656a328690aa5a476a6e',
+  _id: '62ced74e94bbe49ac667cf8f',
   postedBy: '62b9e28cc8da181ea71296d5',
   restaurantId: '62b3b24e2174cc0c56ab33b5',
   content: 'This is a review by Jennie about the Southern restaurant',
@@ -104,7 +110,7 @@ describe('Reviews Test Suite', () => {
 
   it('test get /:id endpoints', async () => {
     const response = await request('http://localhost:3000').get(
-      '/reviews/62ce656a328690aa5a476a6e'
+      '/reviews/62ced74e94bbe49ac667cf8f'
     );
 
     expect(response.body).toEqual(review);
@@ -127,7 +133,7 @@ describe('Reviews Test Suite', () => {
 
   it('test delete /:id endpoints', async () => {
     const response = await request('http://localhost:3000').delete(
-      '/reviews/62ce656a328690aa5a476a6e'
+      '/reviews/62ced74e94bbe49ac667cf8f'
     );
     expect(response.statusCode).toBe(204);
   });

@@ -30,7 +30,19 @@ const cuisinesArray = [
       'Very quick, and unhealthy, this might just cure your cravings.',
   },
   {
-    _id: '62ce671db35b4e0c98917df4',
+    _id: '62ce691183ee7c8742b7da83',
+    name: 'Fast Food',
+    description:
+      'Very quick, and unhealthy, this might just cure your cravings.',
+  },
+  {
+    _id: '62ced35c74545c504ca7dff4',
+    name: 'Fast Food',
+    description:
+      'Very quick, and unhealthy, this might just cure your cravings.',
+  },
+  {
+    _id: '62ced74e94bbe49ac667cf8e',
     name: 'Fast Food',
     description:
       'Very quick, and unhealthy, this might just cure your cravings.',
@@ -38,7 +50,7 @@ const cuisinesArray = [
 ];
 
 const cuisine = {
-  _id: '62ce671db35b4e0c98917df4',
+  _id: '62ced74e94bbe49ac667cf8e',
   name: 'Fast Food',
   description: 'Very quick, and unhealthy, this might just cure your cravings.',
 };
@@ -53,7 +65,7 @@ describe('cuisine Test Suite', () => {
 
   it('test get /:id endpoints', async () => {
     const response = await request('http://localhost:3000').get(
-      '/cuisines/62ce671db35b4e0c98917df4'
+      '/cuisines/62ced74e94bbe49ac667cf8e'
     );
 
     expect(response.body).toEqual(cuisine);
@@ -76,7 +88,7 @@ describe('cuisine Test Suite', () => {
 
   it('test delete /:id endpoints', async () => {
     const response = await request('http://localhost:3000').delete(
-      '/cuisines/62ce671db35b4e0c98917df4'
+      '/cuisines/62ced74e94bbe49ac667cf8e'
     );
 
     expect(response.statusCode).toBe(204);

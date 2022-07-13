@@ -2,7 +2,7 @@ const request = require('supertest');
 
 describe('Restaurants Test Suite', () => {
   const restaurant = {
-    _id: '62ce5e013c9413674ed7a407',
+    _id: '62ced74d94bbe49ac667cf8c',
     restaurantName: 'Korean Restaurant',
     cuisine: '62b9f1ba647a293727fb4f98',
     description: 'A brief description about the restaurant',
@@ -17,7 +17,7 @@ describe('Restaurants Test Suite', () => {
 
   it('test get /:id endpoints', async () => {
     const response = await request('http://localhost:3000').get(
-      '/restaurants/62ce5e013c9413674ed7a407'
+      '/restaurants/62ced74d94bbe49ac667cf8c'
     );
 
     expect(response.body).toEqual(restaurant);
@@ -35,6 +35,7 @@ describe('Restaurants Test Suite', () => {
       closes: '10pm',
       phoneNumber: '208-356-9005',
       restaurantWebsite: 'example.com',
+      imgUrl: null,
     };
 
     const response = await request('http://localhost:3000')
@@ -46,7 +47,7 @@ describe('Restaurants Test Suite', () => {
 
   it('test delete /:id endpoints', async () => {
     const response = await request('http://localhost:3000').delete(
-      '/restaurants/62ce5e013c9413674ed7a407'
+      '/restaurants/62ced74d94bbe49ac667cf8c'
     );
 
     expect(response.statusCode).toBe(204);
