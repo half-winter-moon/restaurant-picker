@@ -320,6 +320,7 @@
                   "example": "test"
                 },
                 "password": {
+                  "type": "string",
                   "example": "12345"
                 },
                 "email": {
@@ -390,6 +391,7 @@
                   "example": "test"
                 },
                 "password": {
+                  "type": "string",
                   "example": "12345"
                 },
                 "email": {
@@ -671,13 +673,13 @@
               "type": "object",
               "properties": {
                 "postedBy": {
-                  "example": "any"
+                  "example": "62b9e29cc8da181ea71296d6"
                 },
                 "restaurantId": {
-                  "example": "any"
+                  "example": "62b9d069a723d8b5d45f6a07"
                 },
                 "content": {
-                  "example": "any"
+                  "example": "This is an updated review by someone about such restaurant"
                 }
               }
             }
