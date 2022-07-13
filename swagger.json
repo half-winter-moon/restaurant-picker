@@ -64,7 +64,8 @@
                   "example": "274 S 2nd W, Rexburg, ID 83440"
                 },
                 "zipCode": {
-                  "example": "'54321'"
+                  "type": "string",
+                  "example": "54321"
                 },
                 "opens": {
                   "example": "10am"
@@ -159,7 +160,8 @@
                   "example": "274 S 2nd W, Rexburg, ID 83440"
                 },
                 "zipCode": {
-                  "example": "'29387'"
+                  "type": "string",
+                  "example": "29387"
                 },
                 "opens": {
                   "example": "10am"
