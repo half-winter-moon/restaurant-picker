@@ -11,6 +11,7 @@ const saveRestaurant = (req, res, next) => {
     closes: 'required|string',
     phoneNumber: 'required|string',
     restaurantWebsite: 'required|string',
+    imgUrl: 'string',
   };
   validator(req.body, validationRule, {}, (err, status) => {
     if (!status) {

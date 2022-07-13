@@ -64,7 +64,7 @@
                   "example": "274 S 2nd W, Rexburg, ID 83440"
                 },
                 "zipCode": {
-                  "example": "54321"
+                  "example": "'54321'"
                 },
                 "opens": {
                   "example": "10am"
@@ -77,6 +77,9 @@
                 },
                 "restaurantWebsite": {
                   "example": "example.com"
+                },
+                "imgUrl": {
+                  "example": "../pic.jpg"
                 }
               }
             }
@@ -156,7 +159,7 @@
                   "example": "274 S 2nd W, Rexburg, ID 83440"
                 },
                 "zipCode": {
-                  "example": "29387"
+                  "example": "'29387'"
                 },
                 "opens": {
                   "example": "10am"
@@ -169,6 +172,9 @@
                 },
                 "restaurantWebsite": {
                   "example": "example.com"
+                },
+                "imgUrl": {
+                  "example": "../picture.jpg"
                 }
               }
             }

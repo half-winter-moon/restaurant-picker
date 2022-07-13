@@ -8,7 +8,7 @@
 GET http://localhost:3000/restaurants
 
 ### Gets a restaurant by its ID
-GET http://localhost:3000/restaurants/62cc3e4fb16ca999a72c36f3
+GET http://localhost:3000/restaurants/62ce4253a571bb73aef548b2
 
 ### Creates a restaurant
 POST http://localhost:3000/restaurants HTTP/1.1 
@@ -23,16 +23,17 @@ content-type: application/json
   "opens": "10am",
   "closes": "9pm",
   "phoneNumber": "208-356-9005",
-  "restaurantWebsite": "example.com"
+  "restaurantWebsite": "example.com",
+  "imgUrl": "../pic.jpg"
 }
 
 ### Updates a restaurant
-PUT http://localhost:3000/restaurants/62b39a41158ce93627c42dad HTTP/1.1 
+PUT http://localhost:3000/restaurants/62ce4253a571bb73aef548b2 HTTP/1.1 
 content-type: application/json
 
 {
   "restaurantName": "Other Name",
-  "cuisine": "Whatever",
+  "cuisine": "62b9d03ba723d8b5d45f6a05",
   "description": "A brief description about the restaurant",
   "address": "274 S 2nd W, Rexburg, ID 83440",
   "zipCode": "13452",
@@ -40,6 +41,7 @@ content-type: application/json
   "closes": "9pm",
   "phoneNumber": "208-356-9005",
   "restaurantWebsite": "example.com",
+  "imgUrl": "../other.jpg"
 }
 
 ### Gets restaurant that do not match such Zip Code
@@ -49,4 +51,4 @@ GET http://localhost:3000/restaurants/excludeByZipCode/12345
 GET http://localhost:3000/restaurants/excludeByCuisine/Mexican
 
 ### Deletes a restaurant by its ID
-DELETE  http://localhost:3000/restaurants/62b3ac39c2f688521a6317be HTTP/1.1 
+DELETE  http://localhost:3000/restaurants/62ce4268a571bb73aef548b3 HTTP/1.1 
