@@ -7,7 +7,9 @@
   },
   "host": "cse341-restaurant-picker.herokuapp.com",
   "basePath": "/",
-  "schemes": ["https"],
+  "schemes": [
+    "https"
+  ],
   "tags": [
     {
       "name": "Restaurants",
@@ -22,11 +24,18 @@
     "/restaurants/": {
       "get": {
         "summary": "Gets all restaurants",
-        "tags": ["Restaurants"],
-        "produces": ["application/json"],
+        "tags": [
+          "Restaurants"
+        ],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [],
         "security": {
-          "restaurant_auth": ["write:restaurants", "read:restaurants"]
+          "restaurant_auth": [
+            "write:restaurants",
+            "read:restaurants"
+          ]
         },
         "responses": {
           "200": {
@@ -39,10 +48,15 @@
       },
       "post": {
         "summary": "Creates a restaurant",
-        "tags": ["Restaurants"],
+        "tags": [
+          "Restaurants"
+        ],
         "description": "When creating a restaurant, use the cuisine _id to reference which cuisine it belongs to. Could be done using a dropdown and passing the _id as a value",
         "security": {
-          "restaurant_auth": ["write:restaurants", "read:restaurants"]
+          "restaurant_auth": [
+            "write:restaurants",
+            "read:restaurants"
+          ]
         },
         "parameters": [
           {
@@ -102,10 +116,17 @@
     "/restaurants/{id}": {
       "get": {
         "summary": "Gets a restaurant by its ID",
-        "tags": ["Restaurants"],
-        "produces": ["application/json"],
+        "tags": [
+          "Restaurants"
+        ],
+        "produces": [
+          "application/json"
+        ],
         "security": {
-          "restaurant_auth": ["write:restaurants", "read:restaurants"]
+          "restaurant_auth": [
+            "write:restaurants",
+            "read:restaurants"
+          ]
         },
         "parameters": [
           {
@@ -129,10 +150,15 @@
       },
       "put": {
         "summary": "Updates a restaurant by its ID",
-        "tags": ["Restaurants"],
+        "tags": [
+          "Restaurants"
+        ],
         "description": "When updating a restaurant, use the cuisine _id to reference which cuisine it belongs to. Could be done using a dropdown and passing the _id as a value",
         "security": {
-          "restaurant_auth": ["write:restaurants", "read:restaurants"]
+          "restaurant_auth": [
+            "write:restaurants",
+            "read:restaurants"
+          ]
         },
         "parameters": [
           {
@@ -199,9 +225,14 @@
       },
       "delete": {
         "summary": "Deletes a restaurant by its ID",
-        "tags": ["Restaurants"],
+        "tags": [
+          "Restaurants"
+        ],
         "security": {
-          "restaurant_auth": ["write:restaurants", "read:restaurants"]
+          "restaurant_auth": [
+            "write:restaurants",
+            "read:restaurants"
+          ]
         },
         "parameters": [
           {
@@ -227,12 +258,19 @@
     "/restaurants/excludeByZipCode/{zipCode}": {
       "get": {
         "summary": "Gets all restaurants except the ones that match such Zip Code",
-        "tags": ["Restaurants"],
+        "tags": [
+          "Restaurants"
+        ],
         "description": "Type the Zip Code of the restaurant where you don't want to eat",
         "security": {
-          "restaurant_auth": ["write:restaurants", "read:restaurants"]
+          "restaurant_auth": [
+            "write:restaurants",
+            "read:restaurants"
+          ]
         },
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "zipCode",
@@ -257,12 +295,19 @@
     "/restaurants/excludeByCuisine/{cuisine}": {
       "get": {
         "summary": "Gets all restaurants except the ones that match such Cuisine",
-        "tags": ["Restaurants"],
+        "tags": [
+          "Restaurants"
+        ],
         "description": "Type the cuisine of the restaurant where you don't want to eat",
         "security": {
-          "restaurant_auth": ["write:restaurants", "read:restaurants"]
+          "restaurant_auth": [
+            "write:restaurants",
+            "read:restaurants"
+          ]
         },
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "cuisine",
@@ -287,10 +332,17 @@
     "/users/": {
       "get": {
         "summary": "Gets all users",
-        "tags": ["Users"],
-        "produces": ["application/json"],
+        "tags": [
+          "Users"
+        ],
+        "produces": [
+          "application/json"
+        ],
         "security": {
-          "restaurant_auth": ["write:restaurants", "read:restaurants"]
+          "restaurant_auth": [
+            "write:restaurants",
+            "read:restaurants"
+          ]
         },
         "parameters": [],
         "responses": {
@@ -304,10 +356,15 @@
       },
       "post": {
         "summary": "Creates a user",
-        "tags": ["Users"],
+        "tags": [
+          "Users"
+        ],
         "description": "",
         "security": {
-          "restaurant_auth": ["write:restaurants", "read:restaurants"]
+          "restaurant_auth": [
+            "write:restaurants",
+            "read:restaurants"
+          ]
         },
         "parameters": [
           {
@@ -345,11 +402,18 @@
     "/users/{id}": {
       "get": {
         "summary": "Gets a user by its ID",
-        "tags": ["Users"],
+        "tags": [
+          "Users"
+        ],
         "security": {
-          "restaurant_auth": ["write:restaurants", "read:restaurants"]
+          "restaurant_auth": [
+            "write:restaurants",
+            "read:restaurants"
+          ]
         },
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -368,10 +432,15 @@
         }
       },
       "put": {
-        "tags": ["Users"],
+        "tags": [
+          "Users"
+        ],
         "summary": "Updates a user by its ID",
         "security": {
-          "restaurant_auth": ["write:restaurants", "read:restaurants"]
+          "restaurant_auth": [
+            "write:restaurants",
+            "read:restaurants"
+          ]
         },
         "parameters": [
           {
@@ -412,10 +481,15 @@
         }
       },
       "delete": {
-        "tags": ["Users"],
+        "tags": [
+          "Users"
+        ],
         "summary": "Deletes a user by its ID",
         "security": {
-          "restaurant_auth": ["write:restaurants", "read:restaurants"]
+          "restaurant_auth": [
+            "write:restaurants",
+            "read:restaurants"
+          ]
         },
         "parameters": [
           {
@@ -437,9 +511,13 @@
     },
     "/cuisines/": {
       "get": {
-        "tags": ["Cuisines"],
+        "tags": [
+          "Cuisines"
+        ],
         "summary": "Gets all cuisines",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [],
         "responses": {
           "200": {
@@ -451,7 +529,9 @@
         }
       },
       "post": {
-        "tags": ["Cuisines"],
+        "tags": [
+          "Cuisines"
+        ],
         "summary": "Creates a cuisine",
         "parameters": [
           {
@@ -486,8 +566,12 @@
     "/cuisines/{id}": {
       "get": {
         "summary": "Gets a cuisine by its ID",
-        "tags": ["Cuisines"],
-        "produces": ["application/json"],
+        "tags": [
+          "Cuisines"
+        ],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -506,7 +590,9 @@
         }
       },
       "put": {
-        "tags": ["Cuisines"],
+        "tags": [
+          "Cuisines"
+        ],
         "summary": "Updates a cuisine by its ID",
         "parameters": [
           {
@@ -544,7 +630,9 @@
         }
       },
       "delete": {
-        "tags": ["Cuisines"],
+        "tags": [
+          "Cuisines"
+        ],
         "summary": "Deletes a cuisine by its ID",
         "parameters": [
           {
@@ -567,11 +655,18 @@
     "/reviews/": {
       "get": {
         "summary": "Gets all reviews",
-        "tags": ["Reviews"],
+        "tags": [
+          "Reviews"
+        ],
         "security": {
-          "restaurant_auth": ["write:restaurants", "read:restaurants"]
+          "restaurant_auth": [
+            "write:restaurants",
+            "read:restaurants"
+          ]
         },
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [],
         "responses": {
           "200": {
@@ -583,11 +678,16 @@
         }
       },
       "post": {
-        "tags": ["Reviews"],
+        "tags": [
+          "Reviews"
+        ],
         "summary": "Creates a review",
         "description": "When creating a Review, use the user _id to reference which user posted it and also the restaurant _id to where it belongs. Could be done fetching such restaurant and user information and pass those in hidden inputs",
         "security": {
-          "restaurant_auth": ["write:restaurants", "read:restaurants"]
+          "restaurant_auth": [
+            "write:restaurants",
+            "read:restaurants"
+          ]
         },
         "parameters": [
           {
@@ -624,12 +724,19 @@
     },
     "/reviews/{id}": {
       "get": {
-        "tags": ["Reviews"],
+        "tags": [
+          "Reviews"
+        ],
         "security": {
-          "restaurant_auth": ["write:restaurants", "read:restaurants"]
+          "restaurant_auth": [
+            "write:restaurants",
+            "read:restaurants"
+          ]
         },
         "summary": "Gets a review by its ID",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -651,10 +758,15 @@
         }
       },
       "put": {
-        "tags": ["Reviews"],
+        "tags": [
+          "Reviews"
+        ],
         "description": "When updating a Review, use the user _id to reference which user posted it and also the restaurant _id to where it belongs. Could be done fetching such restaurant and user information and pass those in hidden inputs",
         "security": {
-          "restaurant_auth": ["write:restaurants", "read:restaurants"]
+          "restaurant_auth": [
+            "write:restaurants",
+            "read:restaurants"
+          ]
         },
         "summary": "Updates a review by its ID",
         "parameters": [
@@ -699,10 +811,15 @@
         }
       },
       "delete": {
-        "tags": ["Reviews"],
+        "tags": [
+          "Reviews"
+        ],
         "summary": "Deletes a review by its ID",
         "security": {
-          "restaurant_auth": ["write:restaurants", "read:restaurants"]
+          "restaurant_auth": [
+            "write:restaurants",
+            "read:restaurants"
+          ]
         },
         "parameters": [
           {
