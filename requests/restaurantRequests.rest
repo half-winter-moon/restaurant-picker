@@ -51,4 +51,4 @@ GET http://localhost:3000/restaurants/excludeByZipCode/12345
 GET http://localhost:3000/restaurants/excludeByCuisine/Mexican
 
 ### Deletes a restaurant by its ID
-DELETE  http://localhost:3000/restaurants/62ce4268a571bb73aef548b3 HTTP/1.1 
+DELETE  http://localhost:3000/restaurants/62ce458e5314790e046640bc HTTP/1.1 
