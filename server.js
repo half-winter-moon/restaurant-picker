@@ -44,19 +44,9 @@ app.get('/', (req, res) => {
 });
 
 app.use('/restaurants', restaurantsRoutes);
+app.use('/cuisines', cuisinesRoutes);
 app.use('/users', requiresAuth(), usersRoutes);
-app.use('/cuisines', cuisinesRoutes);
 app.use('/reviews', requiresAuth(), reviewsController);
-
-// app.use('/restaurants', restaurantsRoutes);
-// app.use('/users', usersRoutes);
-// app.use('/cuisines', cuisinesRoutes);
-// app.use('/reviews', requiresAuth(), reviewsController);
-
-app.use('/restaurants', restaurantsRoutes);
-app.use('/users', usersRoutes);
-app.use('/cuisines', cuisinesRoutes);
-app.use('/reviews', reviewsController);
 
 mongodb.initDb((err) => {
   if (err) {
